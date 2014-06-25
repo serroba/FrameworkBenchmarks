@@ -43,5 +43,25 @@
       "notes": "",
       "versus": "php"
     }
+    "postgresql": {
+      "setup_file": "setup",
+      "db_url": "/pg/db",
+      "query_url": "/pg/queries?queries=",
+      "fortune_url": "/pg/fortunes",
+      "port": 8080,
+      "approach": "Realistic",
+      "classification": "Fullstack",
+      "database": "PostgreSQL",
+      "framework": "phalcon",
+      "language": "PHP",
+      "orm": "Full",
+      "platform": "PHP-FPM",
+      "webserver": "nginx",
+      "os": "Linux",
+      "database_os": "Linux",
+      "display_name": "phalcon",
+      "notes": "",
+      "versus": "php"
+    }
   }]
 }

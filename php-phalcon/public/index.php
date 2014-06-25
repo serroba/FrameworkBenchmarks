@@ -66,11 +66,26 @@ try {
             'username' => $database->username,
             'password' => $database->password,
             'dbname' => $database->name,
+            'persistent' => true,
             'options'  => array(
                 PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'
             )
         ));
     });
+    
+    $di->set('dbPostgres', function() use ($config) {
+
+        $database = $config->dbPostgres;
+
+        return new \Phalcon\Db\Adapter\Pdo\Postgresql(array(
+            'host' => $database->host,
+            'username' => $database->username,
+            'password' => $database->password,
+            'dbname' => $database->dbname,
+            'options'  => array(PDO::ATTR_PERSISTENT => true),
+        ));
+    });
+    
 
     // Setting up the mongodb connection
     $di->set('mongo', function() use ($config) {

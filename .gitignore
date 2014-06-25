@@ -72,3 +72,4 @@ beego/pkg/*
 
 # urweb
 urweb/*.exe
+/php-phalcon/nbproject/private/

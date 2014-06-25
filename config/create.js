@@ -1,5 +1,5 @@
 use hello_world
-db.world.drop()
+db.world.drop();
 for (var i = 1; i <= 10000; i++) {
   db.world.save( { _id: i, id: i, randomNumber: (Math.floor(Math.random() * 10000) + 1) })
 }
@@ -27,7 +27,7 @@ db.fortune.ensureIndex({_id: 1})
 
 // Capitalization matters apparently
 use hello_world
-db.World.drop()
+db.World.drop();
 for (var i = 1; i <= 10000; i++) {
   db.World.save( { _id: i, id: i, randomNumber: (Math.floor(Math.random() * 10000) + 1) })
 }
@@ -50,4 +50,4 @@ db.Fortune.save( {_id: 10, id: 10, message: 'Computers make very fast, very accu
 db.Fortune.save( {_id: 11, id: 11, message: '<script>alert("This should not be displayed in a browser alert box.");</script>'} );
 db.Fortune.save( {_id: 12, id: 12, message: 'フレームワークのベンチマーク'} );
 
-db.Fortune.ensureIndex({_id: 1})
+db.Fortune.ensureIndex({_id: 1});

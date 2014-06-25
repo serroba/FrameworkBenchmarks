@@ -47,4 +47,14 @@ $router->add('/mongodb/fortunes', array(
     'action' => 'fortunes',
 ));
 
+$router->add('/pg/db', array(
+    'controller' => 'bench-pg',
+    'action' => 'db',
+));
+
+$router->add('/pg/queries', array(
+    'controller' => 'bench-pg',
+    'action' => 'queries',
+));
+
 return $router;

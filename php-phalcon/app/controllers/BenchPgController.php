@@ -2,24 +2,16 @@
 
 use Phalcon\Mvc\View;
 
-class BenchController extends \Phalcon\Mvc\Controller
+class BenchPgController extends \Phalcon\Mvc\Controller
 {
 
     public function initialize()
     {
-//        $this->getDI()->set('db', $this->dbMysql);
-                
         // views must be renderd explicitly. safes processing time when not needed.
         $this->view->setRenderLevel(View::LEVEL_LAYOUT);
     }
 
-    public function jsonAction()
-    {
-        return $this->sendContentAsJson(array(
-            'message' => 'Hello, World!'
-        ));
-    }
-
+    
     public function dbAction()
     {
         return $this->sendContentAsJson($this->getRandomWorld());
@@ -79,7 +71,7 @@ class BenchController extends \Phalcon\Mvc\Controller
 
     protected function getRandomWorld()
     {
-        return Worlds::findFirst(mt_rand(1, 10000));
+        return WorldsPG::findFirst(mt_rand(1, 10000));
     }
 
     protected function getFortunesArray()

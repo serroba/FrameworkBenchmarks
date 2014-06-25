@@ -8,6 +8,12 @@ return new \Phalcon\Config(array(
         'password' => 'benchmarkdbpass',
         'name'     => 'hello_world',
     ),
+    'dbPostgres' => array(
+        'host'     => 'localhost',
+        'username' => 'benchmarkdbuser',
+        'password' => 'benchmarkdbpass',
+        'dbname'   => 'hello_world',
+    ),
     'mongodb'     => array(
         'url'     => 'mongodb://localhost:27017',
         'db'      => 'hello_world'
