@@ -5,9 +5,9 @@ class WorldsPG extends \Phalcon\Mvc\Model
     public $id;
 
     public $randomNumber;
-
+    
     public function getSource() {
-        return "World";
+        return "world";
     }
     
     public function initialize(){

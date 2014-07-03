@@ -71,6 +71,10 @@ class BenchPgController extends \Phalcon\Mvc\Controller
 
     protected function getRandomWorld()
     {
+        $test = WorldsPG::findFirst(mt_rand(1, 10000));
+        var_dump($test);die;
+        echo $test->id;
+        echo $test->randomNumber;die;
         return WorldsPG::findFirst(mt_rand(1, 10000));
     }
 
